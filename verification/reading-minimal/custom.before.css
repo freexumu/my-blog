@@ -1,0 +1,52 @@
+/* index_layout: 4 + native CSS Grid: no masonry JS dependency. */
+:root { --global-bg: #f5f7fa; }
+.layout { max-width: 1280px; }
+#recent-posts > .recent-post-items { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-content: start; }
+#recent-posts > .recent-post-items > .recent-post-item { margin: 0; min-width: 0; border: 1px solid rgba(130,145,165,.15); box-shadow: 0 4px 16px rgba(28,45,70,.04); }
+#recent-posts > #pagination { grid-column: 1 / -1; }
+#recent-posts .recent-post-item .post_cover { height: 210px; }
+#recent-posts .recent-post-item > .recent-post-info { padding: 24px; }
+#recent-posts .recent-post-item:hover .post-bg { transform: none; }
+#recent-posts .recent-post-item .post-bg { transition: none; }
+#article-container pre, #article-container code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+@media (max-width: 768px) { #recent-posts > .recent-post-items { grid-template-columns: minmax(0, 1fr); gap: 18px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+
+/* Tutorial reading layout — scoped to article content, not sidebar/navigation. */
+#article-container {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #333333;
+  overflow-wrap: break-word;
+}
+#article-container p { margin: 0 0 1.4em; }
+#article-container h2,
+#article-container h3 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding: 0.5em 0.75em;
+  border-left: 4px solid #49b1f5;
+  background: #f5f5f5;
+  color: #222222;
+  line-height: 1.5;
+}
+#article-container h2 { font-size: 1.65em; }
+#article-container h3 { font-size: 1.4em; }
+#article-container h4 {
+  margin-top: 1.6em;
+  margin-bottom: 0.8em;
+  font-size: 1.15em;
+  line-height: 1.6;
+}
+#article-container ol,
+#article-container ul { padding-left: 1.6em; margin-bottom: 1.4em; }
+#article-container ol > li,
+#article-container ul > li { margin: 0 0 0.6em; }
+#article-container li > ol,
+#article-container li > ul { margin-top: 0.6em; }
+#article-container strong { color: #000000; font-weight: 700; }
+/* Preserve contrast when the existing dark-mode toggle is used. */
+[data-theme="dark"] #article-container { color: #dddddd; }
+[data-theme="dark"] #article-container h2,
+[data-theme="dark"] #article-container h3 { background: #252a30; color: #eeeeee; }
+[data-theme="dark"] #article-container strong { color: #ffffff; }

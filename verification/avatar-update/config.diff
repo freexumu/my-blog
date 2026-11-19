@@ -1,0 +1,11 @@
+--- verification/avatar-update/_config.butterfly.yml.before	2026-11-18 22:18:55
++++ _config.butterfly.yml	2026-11-18 22:18:55
+@@ -60,7 +60,7 @@
+ favicon: /img/favicon.png
+ 
+ avatar:
+-  img: /img/butterfly-icon.png
++  img: /img/avatar.png
+   effect: false
+ 
+ # Disable all banner images

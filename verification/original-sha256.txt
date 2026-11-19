@@ -1,0 +1,3 @@
+114ce110bd388fcc3165aa85f1bdcf30ea6abedcbbf9d73a2cc916c12d3fe103  verification/originals/_config.butterfly.yml
+c2f9ee8826022d64ef7d31b38fbb69cd5e91e04356546918de5eee6b32bc9d75  verification/originals/_config.yml
+bd2bbb164a0cdf0a8da357aa064b282c174fae63ce4a1f80c044daecf8060706  verification/originals/package.json

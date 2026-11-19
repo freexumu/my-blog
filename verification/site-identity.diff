@@ -1,0 +1,43 @@
+--- verification/site-identity-backup/_config.yml	2026-11-18 22:07:58
++++ _config.yml	2026-11-18 22:07:58
+@@ -3,17 +3,17 @@
+ ## Source: https://github.com/hexojs/hexo/
+ 
+ # Site
+-title: 技术与 AI 手记
+-subtitle: '实用工具 · 清晰步骤 · 可复现教程'
++title: 沐帆远行
++subtitle: 'AI工具与效率教程分享'
+ description: '记录 AI 工具、开发实践与效率工作流。'
+ keywords:
+-author: 博主
++author: 许沐
+ language: zh-CN
+ timezone: Asia/Shanghai
+ 
+ # URL
+ ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+-url: http://localhost:4000
++url: https://你的域名.com
+ permalink: :year/:month/:day/:title/
+ permalink_defaults:
+ pretty_urls:
+--- verification/site-identity-backup/_config.butterfly.yml	2026-11-18 22:07:58
++++ _config.butterfly.yml	2026-11-18 22:07:58
+@@ -154,7 +154,7 @@
+ 
+ # The subtitle on homepage
+ subtitle:
+-  enable: false
++  enable: true
+   # Typewriter Effect
+   effect: false
+   # Customize typed.js
+@@ -170,6 +170,7 @@
+   source: false
+   # If you close the typewriter effect, the subtitle will only show the first line of sub
+   sub:
++    - AI工具与效率教程分享
+ 
+ # Article layout on the homepage
+ # 1: Cover on the left, info on the right

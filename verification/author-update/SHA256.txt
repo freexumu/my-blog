@@ -1,0 +1,1 @@
+9e347375d21b8b64f6a67662241815151d1183fc46ec510d1fc67d078d33b01f  verification/author-update/_config.yml.before

@@ -1,0 +1,28 @@
+--- verification/layout-spacing/custom.before.css	2026-11-19 09:05:55
++++ source/css/custom.css	2026-11-19 09:05:55
+@@ -24,13 +24,20 @@
+   line-height: 1.9;
+   overflow-wrap: break-word;
+ }
++/* Desktop spacing: narrow the site frame, let the card control text insets. */
+ @media (min-width: 901px) {
++  .layout {
++    max-width: 1060px;
++    margin-left: auto;
++    margin-right: auto;
++  }
++  #post {
++    padding: 50px 85px;
++  }
+   #article-container {
+-    /* 32 full-width glyphs x (17px + 0.05em) ~= 571.2px.
+-       A narrower parent or mixed punctuation can change the actual line length. */
+-    width: min(100%, 33.6em);
+-    max-width: 620px;
+-    margin: 0 auto;
++    width: 100%;
++    max-width: none;
++    margin: 0;
+   }
+ }
+ #article-container p { margin: 0 0 1.6em; }

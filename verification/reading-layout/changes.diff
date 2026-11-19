@@ -1,0 +1,148 @@
+--- verification/reading-layout/originals/custom.css	2026-11-19 08:28:28
++++ source/css/custom.css	2026-11-19 08:28:28
+@@ -8,8 +8,45 @@
+ #recent-posts .recent-post-item > .recent-post-info { padding: 24px; }
+ #recent-posts .recent-post-item:hover .post-bg { transform: none; }
+ #recent-posts .recent-post-item .post-bg { transition: none; }
+-#article-container { line-height: 1.9; }
+-#article-container h2 { margin-top: 2em; }
+ #article-container pre, #article-container code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+ @media (max-width: 768px) { #recent-posts > .recent-post-items { grid-template-columns: minmax(0, 1fr); gap: 18px; } }
+ @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
++
++/* Tutorial reading layout — scoped to article content, not sidebar/navigation. */
++#article-container {
++  font-size: 16px;
++  line-height: 1.85;
++  color: #333333;
++  overflow-wrap: break-word;
++}
++#article-container p { margin: 0 0 1.4em; }
++#article-container h2,
++#article-container h3 {
++  margin-top: 2em;
++  margin-bottom: 1em;
++  padding: 0.5em 0.75em;
++  border-left: 4px solid #49b1f5;
++  background: #f5f5f5;
++  color: #222222;
++  line-height: 1.5;
++}
++#article-container h2 { font-size: 1.65em; }
++#article-container h3 { font-size: 1.4em; }
++#article-container h4 {
++  margin-top: 1.6em;
++  margin-bottom: 0.8em;
++  font-size: 1.15em;
++  line-height: 1.6;
++}
++#article-container ol,
++#article-container ul { padding-left: 1.6em; margin-bottom: 1.4em; }
++#article-container ol > li,
++#article-container ul > li { margin: 0 0 0.6em; }
++#article-container li > ol,
++#article-container li > ul { margin-top: 0.6em; }
++#article-container strong { color: #000000; font-weight: 700; }
++/* Preserve contrast when the existing dark-mode toggle is used. */
++[data-theme="dark"] #article-container { color: #dddddd; }
++[data-theme="dark"] #article-container h2,
++[data-theme="dark"] #article-container h3 { background: #252a30; color: #eeeeee; }
++[data-theme="dark"] #article-container strong { color: #ffffff; }
+--- verification/reading-layout/originals/不用海外手机号注册美区Apple账号教程.md	2026-11-19 08:28:28
++++ source/_posts/不用海外手机号注册美区Apple账号教程.md	2026-11-19 08:28:28
+@@ -25,45 +25,65 @@
+ ### 二、 注册一个全新的国区 Apple ID
+ 
+ #### 1. 必须开启浏览器“无痕模式”
++
+ 这一步非常关键！如果你之前在浏览器里登录过其他苹果账号，残留的缓存极易触发苹果风控导致注册失败：
++
+ * **电脑端（Chrome / Edge）**：点击浏览器右上角的 **三个点图标** -> 选择 **新建无痕式窗口（InPrivate 窗口）**。
+ * **手机端（Safari）**：点击右下角的 **标签页图标** -> 切换到 **无痕浏览**。
+ 
+ #### 2. 填写基础注册信息
++
+ 1. 在无痕窗口的地址栏中，打开苹果 iCloud 官方注册页面：
+    ```text
+    https://www.icloud.com/
+    ```
+ 
+-点击页面中的 登录 -> 选择底部的 创建 Apple 账户。
+-填写资料注意事项：
+-姓名：随便填写即可。
+-国家或地区：保持默认的 中国大陆 不要动。
+-出生日期：务必选择 大于 18 周岁 的日期，建议填一个自己好记的日子。
+-邮箱与密码：填入刚才准备好的新 QQ 邮箱，并设置密码。
+-手机号：输入你的国内手机号，接收短信。
+-依次填入邮箱收到的 6 位验证码和手机短信验证码，点击 继续 并同意条款，国区账号就注册完成了。
+-三、 核心步骤：免信用卡改区至美国
+-注册完成后，页面会自动跳转到账号管理界面。如果没有跳转，请点击右上角个人头像 -> 选择 管理 Apple 账户。
+-在左侧菜单栏点击 个人信息，找到 国家或地区 这一栏（此时显示为中国大陆），点击旁边的 更改国家或地区。
+-在地区下拉列表中找到并选择 美国，点击继续。
+-关键设置（付款方式选“无”）：
+-进入付款方式页面后，在付款类型中务必选择 无（None）。
+-避坑指南：如果页面里没有出现“无”这个选项，说明当前网络环境被风控了。请关闭浏览器，重新开一个无痕窗口（或开启代理软件的全局模式）再试一次即可。
+-填写美国账单地址：
+-打开在线美国地址生成器（建议使用浏览器自带的翻译功能把页面翻成英文，方便直接复制）：
++2. 点击页面中的 **登录** -> 选择底部的 **创建 Apple 账户**。
+ 
+-```text
+-https://www.meiguodizhi.com/
+-```
++3. **填写资料注意事项：**
+ 
+-随机生成一组美国地址（建议选免税州，如俄勒冈州 Oregon、阿拉斯加州 Alaska 等），将生成的 街道地址、城市、州、邮编、美国电话 一一对应复制粘贴进苹果后台，点击 保存更改。
+-保存后返回个人信息页，看到国家或地区已经变成 美国，改区就彻底成功了！
+-四、 手机端登录验证与下载测试
+-打开 iPhone 上的 App Store（苹果应用商店），点击右上角的个人头像。
+-滑到页面最底部，点击 退出登录（注意：只退出 App Store 即可，千万不要去手机“设置”里退出 iCloud 主账号）。
+-回到 App Store 顶部，输入刚才改好区的 美区 Apple ID 账号和密码 登录。
+-登录成功后，商店会自动刷新并跳转到美区界面（全英文显示）。搜索并下载一个美区专属应用（例如 OKX 欧易），能够正常获取并安装即代表大功告成！
+-五、 常见问题补充
+-为什么美区 App Store 搜到的币安（Binance）和别人不一样？
+-美区商店上架的是受美国监管限制的独立版本（Binance.US），功能受限。如果你需要下载完整的国际版交易所应用，只需按照本文第三步的相同方法，将账号地区更改为 中国台湾 即可正常下载国际版。
++   * **姓名**：随便填写即可。
++   * **国家或地区**：保持默认的 **中国大陆** 不要动。
++   * **出生日期**：务必选择 **大于 18 周岁** 的日期，建议填一个自己好记的日子。
++   * **邮箱与密码**：填入刚才准备好的新 QQ 邮箱，并设置密码。
++   * **手机号**：输入你的国内手机号，接收短信。
++
++4. 依次填入邮箱收到的 **6 位验证码**和手机短信验证码，点击 **继续** 并同意条款，国区账号就注册完成了。
++
++### 三、 核心步骤：免信用卡改区至美国
++
++#### 1. 打开国家或地区设置
++
++1. 注册完成后，页面会自动跳转到账号管理界面。如果没有跳转，请点击右上角个人头像 -> 选择 **管理 Apple 账户**。
++2. 在左侧菜单栏点击 **个人信息**，找到 **国家或地区** 这一栏（此时显示为中国大陆），点击旁边的 **更改国家或地区**。
++3. 在地区下拉列表中找到并选择 **美国**，点击继续。
++
++#### 2. 关键设置（付款方式选“无”）
++
++进入付款方式页面后，在付款类型中务必选择 **无（None）**。
++
++> **避坑指南：**如果页面里没有出现“无”这个选项，说明当前网络环境被风控了。请关闭浏览器，重新开一个无痕窗口（或开启代理软件的全局模式）再试一次即可。
++
++#### 3. 填写美国账单地址
++
++1. 打开在线美国地址生成器（建议使用浏览器自带的翻译功能把页面翻成英文，方便直接复制）：
++
++   ```text
++   https://www.meiguodizhi.com/
++   ```
++
++2. 随机生成一组美国地址（建议选免税州，如俄勒冈州 Oregon、阿拉斯加州 Alaska 等），将生成的 **街道地址、城市、州、邮编、美国电话** 一一对应复制粘贴进苹果后台，点击 **保存更改**。
++3. 保存后返回个人信息页，看到国家或地区已经变成 **美国**，改区就彻底成功了！
++
++### 四、 手机端登录验证与下载测试
++
++1. 打开 iPhone 上的 **App Store（苹果应用商店）**，点击右上角的个人头像。
++2. 滑到页面最底部，点击 **退出登录**（注意：**只退出 App Store 即可，千万不要去手机“设置”里退出 iCloud 主账号**）。
++3. 回到 App Store 顶部，输入刚才改好区的 **美区 Apple ID 账号和密码** 登录。
++4. 登录成功后，商店会自动刷新并跳转到美区界面（全英文显示）。搜索并下载一个美区专属应用（例如 OKX 欧易），能够正常获取并安装即代表大功告成！
++
++### 五、 常见问题补充
++
++#### 为什么美区 App Store 搜到的币安（Binance）和别人不一样？
++
++美区商店上架的是受美国监管限制的独立版本（**Binance.US**），功能受限。如果你需要下载完整的国际版交易所应用，只需按照本文第三步的相同方法，将账号地区更改为 **中国台湾** 即可正常下载国际版。

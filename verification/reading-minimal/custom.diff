@@ -1,0 +1,121 @@
+--- verification/reading-minimal/custom.before.css	2026-11-19 08:52:57
++++ source/css/custom.css	2026-11-19 08:52:57
+@@ -1,4 +1,4 @@
+-/* index_layout: 4 + native CSS Grid: no masonry JS dependency. */
++/* Homepage cards: retain the existing responsive grid. */
+ :root { --global-bg: #f5f7fa; }
+ .layout { max-width: 1280px; }
+ #recent-posts > .recent-post-items { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-content: start; }
+@@ -8,45 +8,88 @@
+ #recent-posts .recent-post-item > .recent-post-info { padding: 24px; }
+ #recent-posts .recent-post-item:hover .post-bg { transform: none; }
+ #recent-posts .recent-post-item .post-bg { transition: none; }
+-#article-container pre, #article-container code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+-@media (max-width: 768px) { #recent-posts > .recent-post-items { grid-template-columns: minmax(0, 1fr); gap: 18px; } }
+-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
++@media (max-width: 768px) {
++  #recent-posts > .recent-post-items { grid-template-columns: minmax(0, 1fr); gap: 18px; }
++}
+ 
+-/* Tutorial reading layout — scoped to article content, not sidebar/navigation. */
++/* Minimal article typography. Values follow the requested specification. */
+ #article-container {
+-  font-size: 16px;
+-  line-height: 1.85;
+-  color: #333333;
++  box-sizing: border-box;
++  min-width: 0;
++  width: 100%;
++  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
++  font-size: 17px;
++  color: #2c2c2c;
++  letter-spacing: 0.05em;
++  line-height: 1.9;
+   overflow-wrap: break-word;
+ }
+-#article-container p { margin: 0 0 1.4em; }
++@media (min-width: 901px) {
++  #article-container {
++    /* 32 full-width glyphs x (17px + 0.05em) ~= 571.2px.
++       A narrower parent or mixed punctuation can change the actual line length. */
++    width: min(100%, 33.6em);
++    max-width: 620px;
++    margin: 0 auto;
++  }
++}
++#article-container p { margin: 0 0 1.6em; }
+ #article-container h2,
++#article-container h3,
++#article-container h4 {
++  padding: 0;
++  border: 0;
++  background: none;
++  box-shadow: none;
++  font-weight: 700;
++  color: #111111;
++  line-height: 1.5;
++}
++#article-container h2 {
++  font-size: 28px;
++  margin-top: 2.2em;
++  margin-bottom: 1em;
++  letter-spacing: 0.03em;
++}
+ #article-container h3 {
++  font-size: 23px;
+   margin-top: 2em;
+-  margin-bottom: 1em;
+-  padding: 0.5em 0.75em;
+-  border-left: 4px solid #49b1f5;
+-  background: #f5f5f5;
+-  color: #222222;
+-  line-height: 1.5;
++  margin-bottom: 0.9em;
++  letter-spacing: 0.03em;
+ }
+-#article-container h2 { font-size: 1.65em; }
+-#article-container h3 { font-size: 1.4em; }
+ #article-container h4 {
++  font-size: 19px;
+   margin-top: 1.6em;
+   margin-bottom: 0.8em;
+-  font-size: 1.15em;
+-  line-height: 1.6;
+ }
+ #article-container ol,
+-#article-container ul { padding-left: 1.6em; margin-bottom: 1.4em; }
++#article-container ul { padding-left: 1.6em; margin-bottom: 1.6em; }
+ #article-container ol > li,
+-#article-container ul > li { margin: 0 0 0.6em; }
++#article-container ul > li {
++  line-height: 1.9;
++  margin: 0 0 0.8em;
++  letter-spacing: 0.05em;
++}
+ #article-container li > ol,
+-#article-container li > ul { margin-top: 0.6em; }
+-#article-container strong { color: #000000; font-weight: 700; }
+-/* Preserve contrast when the existing dark-mode toggle is used. */
++#article-container li > ul { margin-top: 0.8em; }
++#article-container strong { font-weight: 700; color: #000000; }
++#article-container a { color: #1a73e8; text-decoration: none; }
++#article-container a:focus-visible { outline: 2px solid #1a73e8; outline-offset: 3px; }
++/* Keep commands readable and horizontally scrollable instead of breaking them. */
++#article-container pre,
++#article-container code {
++  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
++  letter-spacing: normal;
++}
++#article-container figure.highlight { max-width: 100%; overflow-x: auto; }
++#article-container img { max-width: 100%; height: auto; }
++/* The requested dark text applies to light mode; keep dark mode legible. */
+ [data-theme="dark"] #article-container { color: #dddddd; }
+ [data-theme="dark"] #article-container h2,
+-[data-theme="dark"] #article-container h3 { background: #252a30; color: #eeeeee; }
++[data-theme="dark"] #article-container h3,
++[data-theme="dark"] #article-container h4 { color: #eeeeee; background: none; }
+ [data-theme="dark"] #article-container strong { color: #ffffff; }
++[data-theme="dark"] #article-container a { color: #8ab4f8; }
++@media (prefers-reduced-motion: reduce) {
++  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
++}

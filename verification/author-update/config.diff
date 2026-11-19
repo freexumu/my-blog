@@ -1,0 +1,11 @@
+--- verification/author-update/_config.yml.before	2026-11-18 22:12:55
++++ _config.yml	2026-11-18 22:12:55
+@@ -7,7 +7,7 @@
+ subtitle: 'AI工具与效率教程分享'
+ description: '记录 AI 工具、开发实践与效率工作流。'
+ keywords:
+-author: 许沐
++author: 沐帆远行
+ language: zh-CN
+ timezone: Asia/Shanghai
+ 

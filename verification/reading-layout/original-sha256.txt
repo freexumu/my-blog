@@ -1,0 +1,3 @@
+d2380d1b5f56c1dc71212413c8ab7ce7fa3d363cc3eb69c373429da0ac55a6a8  verification/reading-layout/originals/_config.butterfly.yml
+8ef5d0832ad41e5f7cf1a92e8cac736d1afc792feea7a4bb2de4ccab375f40e8  verification/reading-layout/originals/custom.css
+88b4f26a1e11b4693b11e6012158b4462af588ebe8ba3659b751cabf6308192a  verification/reading-layout/originals/不用海外手机号注册美区Apple账号教程.md
