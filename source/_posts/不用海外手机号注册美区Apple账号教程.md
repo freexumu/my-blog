@@ -38,7 +38,7 @@ date: 2026-11-18 12:00:00
 
 1. 在无痕窗口的地址栏中，打开苹果 iCloud 官方注册页面：
    ```text
-   [https://www.icloud.com/](https://www.icloud.com/)
+   https://www.icloud.com/
    ```
    👉 [点击直达 iCloud 官网](https://www.icloud.com/)
 
@@ -73,9 +73,9 @@ date: 2026-11-18 12:00:00
 1. 打开在线美国地址生成器（建议使用浏览器自带的翻译功能把页面翻成英文，方便直接复制）：
 
    ```text
-   [https://www.meiguodizhi.com/](https://www.meiguodizhi.com/)
+   https://address.333186.xyz/zh-CN/?country=us
    ```
-   👉 [点击直达美国地址生成器](https://www.meiguodizhi.com/)
+   👉 [点击直达美国地址生成器](https://address.333186.xyz/zh-CN/?country=us)
 
 2. 随机生成一组美国地址（建议选免税州，如俄勒冈州 Oregon、阿拉斯加州 Alaska 等），将生成的 **街道地址、城市、州、邮编、美国电话** 一一对应复制粘贴进苹果后台，点击 **保存更改**。
 3. 保存后返回个人信息页，看到国家或地区已经变成 **美国**，改区就彻底成功了！

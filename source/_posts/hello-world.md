@@ -7,28 +7,28 @@ Welcome to Hexo! This is your very first post. Check the documentation for more 
 Hexo 官网：
 
 ```text
-[https://hexo.io/](https://hexo.io/)
+https://hexo.io/
 ```
 👉 [点击直达官网](https://hexo.io/)
 
 Hexo 文档：
 
 ```text
-[https://hexo.io/docs/](https://hexo.io/docs/)
+https://hexo.io/docs/
 ```
 👉 [点击直达文档](https://hexo.io/docs/)
 
 故障排查：
 
 ```text
-[https://hexo.io/docs/troubleshooting.html](https://hexo.io/docs/troubleshooting.html)
+https://hexo.io/docs/troubleshooting.html
 ```
 👉 [点击直达故障排查](https://hexo.io/docs/troubleshooting.html)
 
 GitHub 项目：
 
 ```text
-[https://github.com/hexojs/hexo/issues](https://github.com/hexojs/hexo/issues)
+https://github.com/hexojs/hexo/issues
 ```
 👉 [点击直达 GitHub](https://github.com/hexojs/hexo/issues)
 
@@ -43,7 +43,7 @@ $ hexo new "My New Post"
 More info: Writing
 
 ```text
-[https://hexo.io/docs/writing.html](https://hexo.io/docs/writing.html)
+https://hexo.io/docs/writing.html
 ```
 👉 [点击直达 Writing 文档](https://hexo.io/docs/writing.html)
 
@@ -56,7 +56,7 @@ $ hexo server
 More info: Server
 
 ```text
-[https://hexo.io/docs/server.html](https://hexo.io/docs/server.html)
+https://hexo.io/docs/server.html
 ```
 👉 [点击直达 Server 文档](https://hexo.io/docs/server.html)
 
@@ -69,7 +69,7 @@ $ hexo generate
 More info: Generating
 
 ```text
-[https://hexo.io/docs/generating.html](https://hexo.io/docs/generating.html)
+https://hexo.io/docs/generating.html
 ```
 👉 [点击直达 Generating 文档](https://hexo.io/docs/generating.html)
 
@@ -82,6 +82,6 @@ $ hexo deploy
 More info: Deployment
 
 ```text
-[https://hexo.io/docs/one-command-deployment.html](https://hexo.io/docs/one-command-deployment.html)
+https://hexo.io/docs/one-command-deployment.html
 ```
 👉 [点击直达 Deployment 文档](https://hexo.io/docs/one-command-deployment.html)
